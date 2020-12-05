@@ -13,8 +13,7 @@ while (isNaN(b) || a >= b) {
 }
 document.write(` b = ${b}`)
 
-
-h = +prompt(`Enter a step `)
+h = +prompt(`Enter a step `);
 while (isNaN(h)) {
 	alert(`${h} is not a number`);
 	h = +prompt(`Enter a step `);
