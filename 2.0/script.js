@@ -1,8 +1,8 @@
 
-a = prompt(`Enter a first number`);
+a = +prompt(`Enter a first number`);
 while (isNaN(a)) {
 	alert(`${a} not a number!`);
-	a = prompt(`Enter a first number`);
+	a = +prompt(`Enter a first number`);
 }
 document.write(`a = ${a}`);
 
@@ -18,10 +18,14 @@ while (isNaN(h)) {
 	alert(`${h} is not a number`);
 	h = +prompt(`Enter a step `);
 }
-x = a + h;
-for (x = a; x <= b - h; x + h) {
-	document.write(` ${x}`);
+
+i = a;
+fact = 1;
+for (; a <= b; a = a + h) {
+	while (i <= a) {
+		i++;
+		fact *= i - 1;
+	}
+	console.log(`${a}! = ${fact}`);
 }
-
-
-
+console.log(`*****`);
