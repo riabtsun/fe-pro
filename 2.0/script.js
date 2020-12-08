@@ -21,11 +21,13 @@ while (isNaN(h)) {
 
 i = a;
 fact = 1;
-for (; a <= b; a = a + h) {
+for (summ = 0; a <= b; a = a + h) {
 	while (i <= a) {
 		i++;
 		fact *= i - 1;
 	}
 	console.log(`${a}! = ${fact}`);
+	summ = fact + summ;
 }
 console.log(`*****`);
+console.log(`summ of factorials = ${summ}`)
