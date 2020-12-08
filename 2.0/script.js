@@ -27,7 +27,7 @@ for (summ = 0; a <= b; a = a + h) {
 		fact *= i - 1;
 	}
 	console.log(`${a}! = ${fact}`);
-	summ = fact + summ;
+	summ += fact;
 }
 console.log(`*****`);
 console.log(`summ of factorials = ${summ}`)
