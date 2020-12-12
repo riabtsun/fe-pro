@@ -44,8 +44,6 @@ console.log(`*****EX-2b*****`);
 
 console.log(arrB);
 
-
-
 for (i = 0, minIndex = 0, maxIndex = 0; i < arrB.length; i++) {
 	if (arrB[i] < arrB[minIndex]) {
 		minIndex = i;
@@ -56,5 +54,48 @@ for (i = 0, minIndex = 0, maxIndex = 0; i < arrB.length; i++) {
 }
 console.log(`min element = ${arrB[minIndex]}, max element = ${maxIndex}`);
 
+console.log(`*****EX-3*****`);
+
+arrC = new Array(10);
+arrD = new Array()
+for (i = 0, max = 100; i < arrC.length; i++) {
+	arrC[i] = Math.floor(Math.random() * Math.floor(max));
+}
+for (i = 0, minIndex = 0, maxIndex = 0; i < arrC.length; i++) {
+	if (arrC[i] < arrC[minIndex]) {
+		minIndex = i;
+	}
+	if (arrC[i] > arrC[maxIndex]) {
+		maxIndex = i;
+	}
+
+}
+for (i = 0; i < arrC.length; i++)
+	if (arrC[i] !== arrC[minIndex] && arrC[i] !== arrC[maxIndex]) {
+		arrD[i] = arrC[i];
+	}
+
+
+console.log(arrC);
+console.log(`min element = ${arrC[minIndex]}, max element = ${arrC[maxIndex]}`);
+console.log(arrD);
+
+console.log(`*****EX-4*****`);
+
+arrE = new Array(10);
+
+for (i = 0, max = 100; i < arrE.length; i++) {
+	arrE[i] = Math.floor(Math.random() * Math.floor(max));
+}
+for (i = 0, minIndex = 0, maxIndex = 0; i < arrE.length; i++) {
+	if (arrE[i] < arrE[minIndex]) {
+		minIndex = i;
+	}
+	if (arrE[i] > arrE[maxIndex]) {
+		maxIndex = i;
+	}
+}
+console.log(arrE);
+console.log(`min element = ${arrE[minIndex]}, max element = ${arrE[maxIndex]}`);
 
 
