@@ -90,12 +90,22 @@ for (i = 0, max = 100; i < arrE.length; i++) {
 for (i = 0, minIndex = 0, maxIndex = 0; i < arrE.length; i++) {
 	if (arrE[i] < arrE[minIndex]) {
 		minIndex = i;
+		mini = arrE[minIndex];
 	}
 	if (arrE[i] > arrE[maxIndex]) {
 		maxIndex = i;
+		maxi = arrE[maxIndex];
 	}
 }
 console.log(arrE);
 console.log(`min element = ${arrE[minIndex]}, max element = ${arrE[maxIndex]}`);
+arrE[maxIndex] = mini;
+arrE[minIndex] = maxi;
+
+// console.log(mini);
+// console.log(maxi);
+console.log(arrE);
+
+
 
 
