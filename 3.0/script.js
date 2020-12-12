@@ -102,8 +102,6 @@ console.log(`min element = ${arrE[minIndex]}, max element = ${arrE[maxIndex]}`);
 arrE[maxIndex] = mini;
 arrE[minIndex] = maxi;
 
-// console.log(mini);
-// console.log(maxi);
 console.log(arrE);
 
 
