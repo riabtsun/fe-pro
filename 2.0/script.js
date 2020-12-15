@@ -1,8 +1,8 @@
 
-a = prompt(`Enter a first number`);
+a = +prompt(`Enter a first number`);
 while (isNaN(a)) {
 	alert(`${a} not a number!`);
-	a = prompt(`Enter a first number`);
+	a = +prompt(`Enter a first number`);
 }
 document.write(`a = ${a}`);
 
@@ -13,16 +13,21 @@ while (isNaN(b) || a >= b) {
 }
 document.write(` b = ${b}`)
 
-
-h = +prompt(`Enter a step `)
-while (isNaN(h)) {
+h = +prompt(`Enter a step `);
+while (isNaN(h) || h < 1) {
 	alert(`${h} is not a number`);
 	h = +prompt(`Enter a step `);
 }
-x = a + h;
-for (x = a; x <= b - h; x + h) {
-	document.write(` ${x}`);
+
+i = a;
+fact = 1;
+for (summ = 0; a <= b; a = a + h) {
+	while (i <= a) {
+		i++;
+		fact *= i - 1;
+	}
+	console.log(`${a}! = ${fact}`);
+	summ += fact;
 }
-
-
-
+console.log(`*****`);
+console.log(`summ of factorials = ${summ}`)
