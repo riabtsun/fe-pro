@@ -75,7 +75,6 @@ for (i = 0; i < arrC.length; i++)
     arrD[i] = arrC[i];
   }
 
-
 console.log(arrC);
 console.log(`min element = ${arrC[minIndex]}, max element = ${arrC[maxIndex]}`);
 console.log(arrD);
@@ -87,7 +86,7 @@ arrE = new Array(10);
 for (i = 0, max = 100; i < arrE.length; i++) {
   arrE[i] = Math.floor(Math.random() * Math.floor(max));
 }
-for (i = 0, minIndex = 0, maxIndex = 0; i < arrE.length; i++) {
+for (i = 0, minIndex = 0, maxIndex = 0, maxi = 0, mini = 0; i < arrE.length; i++) {
   if (arrE[i] < arrE[minIndex]) {
     minIndex = i;
     mini = arrE[minIndex];
