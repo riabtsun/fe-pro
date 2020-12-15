@@ -71,7 +71,7 @@ for (i = 0, minIndex = 0, maxIndex = 0; i < arrC.length; i++) {
 
 }
 for (i = 0; i < arrC.length; i++)
-  if (arrC[i] !== arrC[minIndex] && arrC[i] !== arrC[maxIndex]) {
+  if (arrC[i] > arrC[minIndex] && arrC[i] < arrC[maxIndex]) {
     arrD[i] = arrC[i];
   }
 
