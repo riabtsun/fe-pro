@@ -1,7 +1,7 @@
 
 function biggerArr(a, b) {
-  sumA = 0;
-  sumB = 0;
+  let sumA = 0;
+  let sumB = 0;
   for (i = 0, j = 0; i < a.length, j < b.length; i++, j++) {
     if (typeof a[i] === 'number') {
       sumA += a[i];
