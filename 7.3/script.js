@@ -15,15 +15,13 @@ function copy(a, b) {
     } else {
       newList.push(a[i]);
     }
-
   }
   return newList;
-}
-
+};
 
 function multi(value) {
   return value * 10;
 }
 
-newList = copy(arrA, multi);
+let newList = copy(arrA, multi);
 console.log(newList); 
