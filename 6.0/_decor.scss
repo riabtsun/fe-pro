@@ -83,12 +83,17 @@ td {
   transform: rotate(180deg);
   }
 }
+.football{
+  height: 80px;
+  background: url('./images/football-field.svg') no-repeat center;
+  background-size: cover;
+}
 .hockey{
   max-width: 120px;
+  background: url('./images/ice-hockey.svg') no-repeat center;
+  background-size: cover;
 }
 .ocean {
-  background: #0eb5d3;
-}
-.whale {
-  transform: scale(0.5); 
+  background: url('./images/whale.svg') #0eb5d3 no-repeat center;
+  background-size: 50%;
 }

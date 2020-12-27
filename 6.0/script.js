@@ -64,11 +64,9 @@ function midRow() {
   return midRow;
 }
 
-function rest(tdClass, imgClass, img, alt) {
+function rest(tdClass) {
   let rest = `
-  <td class='${tdClass}'>
-    <img class='${imgClass}' src="./images/${img}.svg" alt="${alt}">
-  </td>`;
+  <td class='${tdClass}'></td>`;
   return rest
 }
 
@@ -77,11 +75,11 @@ function bottomRow() {
   <tr>
   ${grass}
   ${roadV}
-  ${rest(undefined, undefined, `football-field`, `football`)}
+  ${rest(`football`)}
   ${roadV}
-  ${rest(`ocean`, `whale`, `whale`, `whale`)}
+  ${rest(`ocean`)}
   ${roadV}
-  ${rest(undefined, 'hockey', `ice-hockey`, `hockey`)}
+  ${rest('hockey')}
   ${roadV}
   ${grass}
   `;
