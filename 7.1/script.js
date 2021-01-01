@@ -14,8 +14,6 @@ function main(a, b, c) {
   return sum;
 }
 
-
-
 main(1, 2, 3);
 
 
