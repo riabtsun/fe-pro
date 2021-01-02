@@ -49,14 +49,33 @@ let price = function tdPrice(price) {
 
 // }
 // }
-function table(day) {
-  for (let i = 0; i <= day.length; i++) {
-    for (let j = 0; j <= day[i].length; j++) {
-      if (typeof day[i][j] == 'string') {
-        console.log(day[i][j])
-      }
+function table(tasks) {
+  let html = "";
+  for (let i = 0; i < tasks.length; i++) {
+    const day = tasks[i];
+
+    for (let j = 0; j < day.length; j++) {
+      const dayTasks = day[j];
+
+      const taskName = dayTasks[0];
+      const taskDuration = dayTasks[1];
+      const taskAmount = amount * taskDuration;
+
+      html += '<tr>';
+      html += `<td>${taskName}</td>`;
+      html += `<td>${taskDuration}</td>`;
+      html += `<td>${taskAmount}</td>`;
+      html += '</tr>';
     }
   }
+
+  return html;
 }
 
-console.log(table(monday))
+let tableHtml = '<table>'
+tableHtml += "<tr><th>Name</th><th>Duration</th><th>Amount</th></tr>"
+const tableRows = table(tasks);
+tableHtml += tableRows
+tableHtml += '</table>'
+
+document.write(tableHtml)
