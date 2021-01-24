@@ -72,18 +72,10 @@ function finalResult(general) {
     return item;
   });
   let rows = money.map(function (all) {
-    tds = all.map(function (td) {
-      td = `<td>${td}</td>`;
-      return td
-    })
-    all = `<tr>${tds.join('')}</tr>`;
-
-    return all
+    tds = `<td>Task name: ${all[0]}</td><td>Task duration: ${all[1]}</td><td>Task amount: $${all[2]}</td></tr>`;
+    return tds
   });
-
   document.write(`<table>${rows.join('')}</table>`);
-
-
 }
 
 finalResult(tasks);
