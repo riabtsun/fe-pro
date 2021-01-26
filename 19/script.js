@@ -59,17 +59,20 @@ let cosmeticsProducts = [
   }
 ];
 
-let kitchen = {
-  category: 'kitchen',
-  render() {
-    let itemImg = ``;
-    if (this.icon) {
-      itemImg = `<img src='images/${this.category}/${this.type}.svg' alt='${this.type}' height='30' >`
-    }
-    document.write(`<div class='category'><div class='box'>${itemImg} <p>Name: ${this.type}</p> <p>price: $${this.price}</p></div></div>`)
-    return `Category ${this.category}`;
+
+function items(category) {
+  this.category = category;
+}
+
+items.prototype.render = function () {
+  let itemImg = ``;
+  if (this.icon) {
+    itemImg = `<img src='images/${this.category}/${this.type}.svg' alt='${this.type}' height='30' >`
   }
-};
+  return `<div class='box'>${itemImg} <p class='text'>Name:  <b>${this.type}</b></p> <p> Price: <b>$${this.price}</b></p></div>`
+}
+
+let kitchen = new items('kitchen');
 let devices = {
   category: 'devices',
   render() {
@@ -77,21 +80,10 @@ let devices = {
     if (this.icon) {
       itemImg = `<img src='images/${this.category}/${this.type}.svg' alt='${this.type}' height='30' >`
     }
-    document.write(`<div class='category'><div class='box'>${itemImg} <p>Name: ${this.type}</p> <p>price: $${this.price.join('-')}</p></div></div>`)
-    return `Category ${this.category} ${itemImg}`;
+    return `<div class='category'><div class='box'>${itemImg} <p class='text'>Name: <b>${this.type}</b></p> <p class='text'>Price: <b>$${this.price.join('-')}</b></p></div></div>`;
   }
 };
-let cosmetics = {
-  category: 'cosmetics',
-  render() {
-    let itemImg = ``;
-    if (this.icon) {
-      itemImg = `<img src='images/${this.category}/${this.type}.svg' alt='${this.type}' height='30' >`
-    }
-    document.write(`<div class='category'><div class='box'>${itemImg} <p>Name: ${this.type}</p> <p>price: $${this.price}</p></div></div>`)
-    return `Category ${this.category} ${itemImg}`;
-  }
-};
+let cosmetics = new items('cosmetics');
 
 function addPrototype(arr, proto) {
   let arrayProto = arr.map(function (category) {
@@ -105,16 +97,28 @@ function addPrototype(arr, proto) {
   return arrayProto
 }
 
+
 let kitchenProductsProto = addPrototype(kitchenProducts, kitchen);
 let devicesProto = addPrototype(devicesProducts, devices);
 let cosmeticsProto = addPrototype(cosmeticsProducts, cosmetics);
 
-kitchenProductsProto.forEach(function (item) {
-  console.log(item.render())
-})
-devicesProto.forEach(function (item) {
-  console.log(item.render())
-})
-cosmeticsProto.forEach(function (item) {
-  console.log(item.render())
-})
+function renderItems(arr) {
+  return arr.map(function (item) {
+    return item.render()
+  })
+}
+
+// renderItems(kitchenProductsProto)
+// renderItems(devicesProto)
+// renderItems(cosmeticsProto)
+
+console.log(kitchenProductsProto, devicesProto, cosmeticsProto)
+
+function renderCategory(arr) {
+  document.write(`<h2>Category: ${arr[0].category}</h2><div class='item-category' >
+   <br> ${renderItems(arr).join('')}</div>`)
+}
+
+renderCategory(kitchenProductsProto)
+renderCategory(devicesProto)
+renderCategory(cosmeticsProto)
