@@ -108,12 +108,6 @@ function renderItems(arr) {
   })
 }
 
-// renderItems(kitchenProductsProto)
-// renderItems(devicesProto)
-// renderItems(cosmeticsProto)
-
-console.log(kitchenProductsProto, devicesProto, cosmeticsProto)
-
 function renderCategory(arr) {
   document.write(`<h2>Category: ${arr[0].category}</h2><div class='item-category' >
    <br> ${renderItems(arr).join('')}</div>`)
