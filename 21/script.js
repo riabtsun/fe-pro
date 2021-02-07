@@ -57,7 +57,7 @@ class myBurger {
   }
 
   final() {
-    return `Your price is ${this.getPrice()}$, and calories is ${this.getKkal()}`
+    return `Your price is ${this.getPrice()}$, and calories is ${this.getKkal()}kkal`
   }
 }
 
