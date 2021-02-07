@@ -46,13 +46,25 @@ class myBurger {
   }
 
   getPrice() {
-    let priceStuff = this.stuffing[0].price + this.stuffing[1].price
-    let price = this.size.price + priceStuff + this.dlc.price
+    let priceOfStuffing = 0
+    if (Object.keys(this.stuffing).length > 0) {
+      for (let key in this.stuffing) {
+        let newPrice = this.stuffing[key]
+        priceOfStuffing += newPrice.price
+      }
+    }
+    let price = this.size.price + priceOfStuffing + this.dlc.price
     return price;
   }
   getKkal() {
-    let kkalStuff = this.stuffing[0].calories + this.stuffing[1].calories
-    let kkal = this.size.calories + kkalStuff + this.dlc.calories;
+    let priceOfkkal = 0
+    if (Object.keys(this.stuffing).length > 0) {
+      for (let key in this.stuffing) {
+        let newPrice = this.stuffing[key]
+        priceOfkkal += newPrice.calories
+      }
+    }
+    let kkal = this.size.calories + priceOfkkal + this.dlc.calories;
     return kkal;
   }
 
