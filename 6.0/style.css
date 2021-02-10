@@ -1,0 +1,119 @@
+.kvartal {
+  border-collapse: collapse;
+}
+
+.auto {
+  width: 30px;
+  padding: 10px 0;
+}
+
+td {
+  padding: 0;
+}
+
+.grass {
+  background-color: greenyellow;
+  width: 40px;
+}
+
+.parking {
+  background-color: #ccc6c6;
+  text-align: center;
+}
+
+.road-v {
+  background-color: #474747;
+  width: 40px;
+  position: relative;
+}
+
+.road-v::before {
+  content: '';
+  border-left: 2px dashed white;
+  position: absolute;
+  left: 48%;
+  height: 100%;
+  top: 0;
+}
+
+.road-v::after {
+  content: '';
+  position: absolute;
+  border: 2px solid yellow;
+  height: 100%;
+  width: 80%;
+  top: 0;
+  left: 5%;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.road-g {
+  background-color: #474747;
+  height: 40px;
+  position: relative;
+}
+
+.road-g::before {
+  content: '';
+  border-top: 2px dashed white;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+
+.road-g::after {
+  content: '';
+  position: absolute;
+  border: 2px solid yellow;
+  border-right: 0;
+  border-left: 0;
+  width: 100%;
+  height: 80%;
+  top: 5%;
+}
+
+.home-block {
+  border-collapse: collapse;
+}
+
+.empty,
+.house,
+.home {
+  width: 30px;
+  border: none;
+  background-color: #ccc6c6;
+}
+
+.home-block tr:nth-child(2) td:nth-child(1) img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.home-block tr:nth-child(2) td:nth-child(3) img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.home-block tr:nth-child(3) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.football {
+  height: 80px;
+  background: url("./images/football-field.svg") no-repeat center;
+  background-size: cover;
+}
+
+.hockey {
+  max-width: 120px;
+  background: url("./images/ice-hockey.svg") no-repeat center;
+  background-size: cover;
+}
+
+.ocean {
+  background: url("./images/whale.svg") #0eb5d3 no-repeat center;
+  background-size: 50%;
+}
+/*# sourceMappingURL=style.css.map */

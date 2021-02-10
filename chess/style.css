@@ -1,0 +1,42 @@
+.board {
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+tr:nth-child(odd) td:nth-child(even) {
+  background-color: #000;
+}
+
+tr:nth-child(even) td {
+  background-color: #000;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+  background-color: #fff;
+}
+
+tr:first-of-type td {
+  background: transparent !important;
+  border: none;
+}
+
+tr:last-child td {
+  background: transparent !important;
+  border: none;
+}
+
+td {
+  border: 1px solid #000;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+td:first-child, td:last-child {
+  background: transparent !important;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
