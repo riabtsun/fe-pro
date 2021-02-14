@@ -3,8 +3,9 @@ for (let elem of lastElem) {
   elem.className = 'last';
 }
 
+let firstItem;
+
 function setFirstItemClassName(level) {
-  let firstItem;
   switch (level) {
     case 1:
       firstItem = document.querySelector(`.root li:first-of-type`);
@@ -17,16 +18,22 @@ function setFirstItemClassName(level) {
       }
       break;
   }
-  firstItem.style.backgroundColor = `red`;
-  lastElem.style.backgroundColor = `green`;
-
-  // setTimeout(function () {
-  // }, 2000)
-  // setTimeout
-  // return firstItem
 }
 
-let firstElem = setFirstItemClassName(2)
-firstItem.style.backgroundColor = `red`;
-lastElem.style.backgroundColor = `green`;
-document.body.style.backgroundColor = 'red'
+setTimeout(function () {
+  if (firstItem.length > 1) {
+    firstItem.forEach(function (elems) {
+      elems.style.backgroundColor = 'red'
+    })
+  }
+  else {
+    firstItem.style.backgroundColor = 'red'
+  }
+  lastElem.forEach(function (elems) {
+    elems.style.backgroundColor = 'green'
+  })
+}, 2000)
+
+
+let insideLevel = setFirstItemClassName(1)
+
