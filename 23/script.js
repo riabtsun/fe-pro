@@ -58,15 +58,6 @@ if (block.offsetLeft == 8) {
   console.log(block.style.left)
 }
 
-let jump = {
-  8: function () {
-    block.style.left += step * 2;
-  }
-}
-
-block.offsetLeft = function (event) {
-  jump[event] && jump[event]()
-}
 function boom() {
   let text = document.querySelector('p')
   text.style.opacity = 1;
