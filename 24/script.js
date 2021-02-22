@@ -1,16 +1,14 @@
-let elems = document.querySelectorAll('input');
-let area = document.querySelector('textarea');
+let values = [
+  document.querySelector('.input-1').value,
+  document.querySelector('.input-2').value,
+  document.querySelector('.input-3').value,
+];
 
-function text() {
-  setInterval(function () {
-    for (let i = 0; i < elems.length; i++) {
-      if (elems[i].value !== '') {
-        area.value += elems[i].value + ','
-      }
-    }
-  }, 2000)
-}
+let inputs = document.querySelectorAll('input');
 
-
-
-text()
+inputs.forEach(function (input, index) {
+  input.addEventListener('change', function () {
+    values[index] = this.value;
+    return document.querySelector('textarea').value = values.join(',');
+  })
+})
