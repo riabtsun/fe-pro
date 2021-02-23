@@ -8,6 +8,8 @@ let inputs = document.querySelectorAll('input');
 
 inputs.forEach(function (input, index) {
   input.addEventListener('change', function () {
+    console.log(this)
+
     values[index] = this.value;
     return document.querySelector('textarea').value = values.join(',');
   })
