@@ -29,10 +29,6 @@
 		.circle {
 			border-radius: 50%;
 		}
-
-		.red {
-			border-color: red;
-		}
 	</style>
 </head>
 
@@ -41,15 +37,15 @@
 	<div class="figure"></div>
 	<form action="">
 		<select name="typeof" id="">
-			<option value="value1" selected>Квадрат</option>
-			<option value="value2">Прямоугольник</option>
-			<option value="value3">Круг</option>
+			<option value="square" selected>Квадрат</option>
+			<option value="rectangle">Прямоугольник</option>
+			<option value="circle">Круг</option>
 		</select>
-		<input type="radio" name="contact" id='black-border'>
+		<input type="radio" name="contact" data-color='black'>
 		<label for="black-border">Черный</label>
-		<input type="radio" name="contact" id='green-border'>
+		<input type="radio" name="contact" data-color='green'>
 		<label for="green-border">Зеленый</label>
-		<input type="radio" name="contact" id='red-border'>
+		<input type="radio" name="contact" data-color='red'>
 		<label for="red-border">Красный</label>
 	</form>
 

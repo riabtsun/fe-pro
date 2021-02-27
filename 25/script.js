@@ -1,14 +1,16 @@
 let radioCheck = document.querySelectorAll('input');
 let figure = document.querySelector('.figure');
+let typeOfFigure = document.querySelector('select')
 
-
-window.onload = radioCheck.forEach(function (btn, index) {
-  console.log(btn.checked)
-  if (btn.checked) {
-    figure.classList.add('red')
-  }
-
+radioCheck.forEach(function (btn, index) {
+  btn.addEventListener('change', coloredFigure);
 })
+function coloredFigure() {
+  figure.style.backgroundColor = this.dataset.color;
+}
 
+typeOfFigure.addEventListener('change', typeFigure);
 
-// figure.classList.add('red')
+function typeFigure() {
+  figure.className = `figure ${this.value}`;
+}
